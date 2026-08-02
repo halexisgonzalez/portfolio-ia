@@ -87,18 +87,19 @@ ol {
 
 .skip-link {
   position: absolute;
-  top: -40px;
+  top: var(--space-4);
   left: var(--space-4);
   z-index: 100;
   padding: var(--space-2) var(--space-4);
   background: var(--color-accent);
   color: var(--color-accent-contrast);
   border-radius: var(--radius-sm);
-  transition: top var(--transition-fast);
+  transform: translateY(-150%);
+  transition: transform var(--transition-fast);
 }
 
 .skip-link:focus {
-  top: var(--space-4);
+  transform: translateY(0);
 }
 
 .container {
