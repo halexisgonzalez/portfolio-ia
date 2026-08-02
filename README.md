@@ -131,9 +131,8 @@ Dentro del `projects` del año correspondiente:
   "id": "clasificador-de-plantas",
   "name": "Clasificador de especies de plantas",
   "description": "Modelo de visión por computadora que identifica especies a partir de fotos de hojas.",
-  "year": 2027,
   "studentIds": ["ana-garcia"],
-  "category": "Computer Vision",
+  "categories": ["Computer Vision"],
   "technologies": ["Python", "PyTorch", "OpenCV"],
   "repository": "https://github.com/ana-garcia/clasificador-de-plantas",
   "demo": "https://ana-garcia.github.io/clasificador-de-plantas/",
@@ -142,8 +141,9 @@ Dentro del `projects` del año correspondiente:
 }
 ```
 
+- No hace falta indicar `year` en el proyecto: se toma automáticamente del año del archivo (`2027.json` → todos sus proyectos son de 2027).
 - `studentIds` puede tener más de un id (proyectos grupales).
-- `category` debe ser una de: `Machine Learning`, `Deep Learning`, `Computer Vision`, `Natural Language Processing`, `Data Science`, `Robótica`, `Generative AI`, `Other`.
+- `categories` es una lista con una o más de: `Machine Learning`, `Deep Learning`, `Computer Vision`, `Natural Language Processing`, `Data Science`, `Robótica`, `Generative AI`, `Other`.
 - `repository`, `demo` e `image` son opcionales: si no existen (o son `null`), la interfaz simplemente no muestra ese botón/imagen — no hace falta dejarlos vacíos.
 - `featured: true` hace que el proyecto aparezca en la sección "Proyectos destacados" de la home.
 

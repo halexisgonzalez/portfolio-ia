@@ -2,6 +2,7 @@ import type {
   AcademicYearData,
   Project,
   ProjectCategory,
+  ProjectInput,
   ProjectWithStudents,
   Student,
   StudentWithYear,
@@ -17,9 +18,14 @@ const yearModules = import.meta.glob<{ default: AcademicYearData }>(
   { eager: true },
 );
 
-function normalizeProject(raw: Project): Project {
+/** An academic year once every project has had its `year` stamped on. */
+type NormalizedYear = Omit<AcademicYearData, 'projects'> & { projects: Project[] };
+
+/** Stamps the cohort's year onto a project and fills in optional defaults. */
+function normalizeProject(raw: ProjectInput, year: number): Project {
   return {
     ...raw,
+    year,
     repository: raw.repository ?? undefined,
     demo: raw.demo ?? undefined,
     image: raw.image ?? undefined,
@@ -27,20 +33,20 @@ function normalizeProject(raw: Project): Project {
   };
 }
 
-const academicYears: AcademicYearData[] = Object.values(yearModules)
+const academicYears: NormalizedYear[] = Object.values(yearModules)
   .map((mod) => ({
     ...mod.default,
-    projects: mod.default.projects.map(normalizeProject),
+    projects: mod.default.projects.map((p) => normalizeProject(p, mod.default.year)),
   }))
   .sort((a, b) => b.year - a.year);
 
 /** All cohorts, most recent year first. */
-export function getAllYears(): AcademicYearData[] {
+export function getAllYears(): NormalizedYear[] {
   return academicYears;
 }
 
 /** A single cohort by year, if it exists. */
-export function getYear(year: number): AcademicYearData | undefined {
+export function getYear(year: number): NormalizedYear | undefined {
   return academicYears.find((y) => y.year === year);
 }
 
@@ -98,7 +104,9 @@ export function getAllTechnologies(): string[] {
 /** Every distinct category actually in use, alphabetically sorted. */
 export function getAllCategoriesInUse(): ProjectCategory[] {
   const set = new Set<ProjectCategory>();
-  for (const project of getAllProjects()) set.add(project.category);
+  for (const project of getAllProjects()) {
+    for (const category of project.categories) set.add(category);
+  }
   return Array.from(set).sort((a, b) => a.localeCompare(b));
 }
 

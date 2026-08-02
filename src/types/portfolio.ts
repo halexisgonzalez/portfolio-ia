@@ -38,7 +38,8 @@ export interface Project {
   year: number;
   /** Ids of the students who authored this project (supports group projects). */
   studentIds: string[];
-  category: ProjectCategory;
+  /** One or more IA areas this project belongs to. */
+  categories: ProjectCategory[];
   technologies: string[];
   repository?: string;
   demo?: string;
@@ -46,13 +47,20 @@ export interface Project {
   featured?: boolean;
 }
 
+/**
+ * Shape of a project entry as written in `src/data/<year>.json`. `year` is
+ * omitted here because it's implied by the file it lives in — it gets
+ * stamped onto each `Project` automatically when the data loads.
+ */
+export type ProjectInput = Omit<Project, 'year'>;
+
 /** Raw shape of each `src/data/<year>.json` file. */
 export interface AcademicYearData {
   year: number;
   /** Optional link to the corresponding release of the academic content repository. */
   materialUrl?: string;
   students: Student[];
-  projects: Project[];
+  projects: ProjectInput[];
 }
 
 /** A student enriched with the cohort year it belongs to. */

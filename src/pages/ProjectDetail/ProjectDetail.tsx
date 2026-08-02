@@ -44,7 +44,9 @@ export function ProjectDetail() {
           </Link>
 
           <div className={styles.badges}>
-            <CategoryBadge category={project.category} />
+            {project.categories.map((category) => (
+              <CategoryBadge key={category} category={category} />
+            ))}
             <span className={styles.year}>Cohorte {project.year}</span>
             {project.featured ? (
               <span className={styles.featured}>Destacado</span>

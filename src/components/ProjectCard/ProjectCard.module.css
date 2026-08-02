@@ -57,6 +57,12 @@
   gap: var(--space-3);
 }
 
+.categories {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
 .year {
   font-size: 0.8125rem;
   font-weight: 600;

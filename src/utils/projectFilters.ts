@@ -24,7 +24,7 @@ export function filterProjects(
 
   return projects.filter((project) => {
     if (filters.year !== 'all' && project.year !== filters.year) return false;
-    if (filters.category !== 'all' && project.category !== filters.category) {
+    if (filters.category !== 'all' && !project.categories.includes(filters.category)) {
       return false;
     }
     if (
@@ -39,7 +39,7 @@ export function filterProjects(
       const haystack = [
         project.name,
         project.description,
-        project.category,
+        ...project.categories,
         ...project.technologies,
         ...students.map((s) => s.name),
       ]

@@ -33,7 +33,11 @@ export function ProjectCard({ project }: ProjectCardProps) {
 
       <div className={styles.body}>
         <div className={styles.meta}>
-          <CategoryBadge category={project.category} />
+          <div className={styles.categories}>
+            {project.categories.map((category) => (
+              <CategoryBadge key={category} category={category} />
+            ))}
+          </div>
           <span className={styles.year}>{project.year}</span>
         </div>
 

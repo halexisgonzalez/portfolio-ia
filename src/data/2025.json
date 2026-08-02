@@ -1,0 +1,199 @@
+{
+  "year": 2025,
+  "students": [
+    {
+      "id": "agustin-sanguesa",
+      "name": "Agustín Sangüesa",
+      "github": "https://github.com/agussanguesa32",
+      "projectIds": ["travel-planner-ai"]
+    },
+    {
+      "id": "gabriel-guillaumet",
+      "name": "Gabriel Agustín Guillaumet",
+      "github": "https://github.com/Pandulc",
+      "projectIds": ["voc-miner"]
+    },
+    {
+      "id": "simon-llamosas",
+      "name": "Simón Llamosas",
+      "github": "https://github.com/simonll4",
+      "projectIds": ["invoice-processing-platform"]
+    },
+    {
+      "id": "victor-spitale",
+      "name": "Víctor Joel Spitale",
+      "github": "https://github.com/Joelspitale",
+      "projectIds": ["data-gov-automator"]
+    },
+    {
+      "id": "agustin-sepulveda-san-martin",
+      "name": "Agustín Nicolás Sepúlveda San Martín",
+      "github": "https://github.com/AguuSz",
+      "projectIds": ["steam-game-recommendations-bot"]
+    },
+    {
+      "id": "matias-carrizo",
+      "name": "Matías Lautaro Carrizo",
+      "github": "https://github.com/MattGoode7",
+      "projectIds": ["social-content-studio"]
+    },
+    {
+      "id": "alejo-gazagne",
+      "name": "Alejo Agustín Gazagne",
+      "github": "https://github.com/AlejoGazagne",
+      "projectIds": ["eth-security"]
+    },
+    {
+      "id": "gaston-camargo-tenaglia",
+      "name": "Gastón Matías Camargo Tenaglia",
+      "github": "https://github.com/gcamargot",
+      "projectIds": ["ia-content-creator"]
+    }
+  ],
+  "projects": [
+    {
+      "id": "travel-planner-ai",
+      "name": "Travel Planner AI",
+      "description": "Aplicación web que genera itinerarios de viaje personalizados con IA: busca vuelos, arma un itinerario día por día con actividades y restaurantes, y calcula el presupuesto detallado del viaje usando Google Gemini.",
+      "studentIds": ["agustin-sanguesa"],
+      "categories": ["Generative AI"],
+      "technologies": [
+        "Python",
+        "FastAPI",
+        "Next.js",
+        "React",
+        "TypeScript",
+        "Tailwind CSS",
+        "Google Gemini AI",
+        "Docker"
+      ],
+      "repository": "https://github.com/agussanguesa32/proyecto-ia-2025",
+      "demo": null,
+      "image": null,
+      "featured": false
+    },
+    {
+      "id": "voc-miner",
+      "name": "Voice-of-Customer Miner (VoC Miner)",
+      "description": "Plataforma que procesa pedidos de soporte de clientes recibidos por Google Chat: normaliza y agrupa mensajes por tema, calcula severidad con el método MoSCoW, aplica deflexión automática con RAG y genera tickets priorizados en osTicket.",
+      "studentIds": ["gabriel-guillaumet"],
+      "categories": ["Natural Language Processing"],
+      "technologies": [
+        "n8n",
+        "Docker",
+        "PostgreSQL",
+        "MariaDB",
+        "Groq",
+        "Llama 3",
+        "osTicket"
+      ],
+      "repository": "https://github.com/Pandulc/Proyecto-IA",
+      "demo": null,
+      "image": null,
+      "featured": false
+    },
+    {
+      "id": "invoice-processing-platform",
+      "name": "Invoice Processing Platform",
+      "description": "Plataforma modular para digitalizar facturas con OCR + LLM y permitir consultas conversacionales sobre la información procesada, compuesta por microservicios coordinados con Docker Compose y una base SQLite compartida.",
+      "studentIds": ["simon-llamosas"],
+      "categories": ["Computer Vision", "Natural Language Processing"],
+      "technologies": [
+        "Python",
+        "FastAPI",
+        "LangGraph",
+        "Groq",
+        "Tesseract OCR",
+        "SQLAlchemy",
+        "SQLite",
+        "Node.js",
+        "Express",
+        "MCP",
+        "Docker",
+        "Nginx"
+      ],
+      "repository": "https://github.com/simonll4/InvoiceProcessingPlatform",
+      "demo": null,
+      "image": null,
+      "featured": false
+    },
+    {
+      "id": "data-gov-automator",
+      "name": "Data Governance & PII Automator",
+      "description": "Sistema automatizado para detectar, clasificar y proteger datos sensibles (PII) en bases de datos: combina reglas SQL con inferencia semántica de Google Gemini para generar un catálogo de datos actualizado y vistas con los campos sensibles ofuscados, sin intervención humana.",
+      "studentIds": ["victor-spitale"],
+      "categories": ["Data Science", "Natural Language Processing"],
+      "technologies": ["n8n", "MySQL", "Google Gemini AI", "Docker", "SQL"],
+      "repository": "https://github.com/Joelspitale/data-gov-automator",
+      "demo": null,
+      "image": null,
+      "featured": false
+    },
+    {
+      "id": "steam-game-recommendations-bot",
+      "name": "Steam Game Recommendations Bot",
+      "description": "Bot de Discord que analiza tu biblioteca de Steam con Google Gemini y recomienda juegos personalizados, mostrando precios en tiempo real e historial de ofertas obtenido de SteamDB.",
+      "studentIds": ["agustin-sepulveda-san-martin"],
+      "categories": ["Generative AI", "Machine Learning"],
+      "technologies": [
+        "Python",
+        "Discord.py",
+        "Google Gemini AI",
+        "Steam Web API",
+        "IsThereAnyDeal API",
+        "Playwright",
+        "Docker"
+      ],
+      "repository": "https://github.com/AguuSz/ia-discord-bot",
+      "demo": null,
+      "image": null,
+      "featured": false
+    },
+    {
+      "id": "social-content-studio",
+      "name": "Social Content Studio",
+      "description": "Panel en Next.js para equipos de social media: genera guiones, propuestas visuales y videos cortos para redes sociales, y analiza sentimiento de textos, orquestando todo mediante automatizaciones en n8n. Incluye un chatbot asistente con RAG y guarda el historial en MongoDB.",
+      "studentIds": ["matias-carrizo"],
+      "categories": ["Generative AI", "Natural Language Processing"],
+      "technologies": ["Next.js", "TypeScript", "n8n", "MongoDB", "Qdrant", "Flowise", "Docker"],
+      "repository": "https://github.com/MattGoode7/ia-project-iua-2025",
+      "demo": null,
+      "image": null,
+      "featured": false
+    },
+    {
+      "id": "eth-security",
+      "name": "ETH Security",
+      "description": "Plataforma de análisis y auto-corrección de contratos inteligentes en Solidity: coordina Slither, Medusa y Echidna en microservicios Docker, envía los resultados a Gemini para el diagnóstico y usa Groq (Llama 3) para generar automáticamente el código corregido.",
+      "studentIds": ["alejo-gazagne"],
+      "categories": ["Generative AI", "Other"],
+      "technologies": [
+        "Python",
+        "FastAPI",
+        "Docker",
+        "Solidity",
+        "Slither",
+        "Medusa",
+        "Echidna",
+        "Google Gemini AI",
+        "Groq"
+      ],
+      "repository": "https://github.com/AlejoGazagne/proyecto-ia",
+      "demo": null,
+      "image": null,
+      "featured": false
+    },
+    {
+      "id": "ia-content-creator",
+      "name": "ia_content_creator",
+      "description": "CLI en Rust que transcribe localmente videos de clases con Whisper y genera resúmenes en Markdown usando un LLM local a través de Ollama, incluyendo una sección con las tareas para la próxima clase.",
+      "studentIds": ["gaston-camargo-tenaglia"],
+      "categories": ["Natural Language Processing", "Generative AI"],
+      "technologies": ["Rust", "Whisper", "whisper.cpp", "Ollama", "FFmpeg"],
+      "repository": "https://github.com/gcamargot/triacher",
+      "demo": null,
+      "image": null,
+      "featured": false
+    }
+  ]
+}
