@@ -1,6 +1,6 @@
 # Portfolio IA
 
-Portfolio académico histórico de proyectos de Inteligencia Artificial desarrollados por estudiantes a lo largo de distintas cohortes (2026, 2027, 2028...).
+Portfolio académico histórico de proyectos de Inteligencia Artificial desarrollados por estudiantes a lo largo de distintas cohortes (2025, 2026, 2027...).
 
 Sitio 100% estático: sin backend, sin base de datos, sin autenticación. Todo el contenido académico vive en archivos JSON versionados en este repositorio y se despliega gratuitamente en GitHub Pages.
 
@@ -77,7 +77,7 @@ Si el repositorio se llama distinto a `portfolio-ia`, actualizar el `base` en [`
 
 ## Agregar una nueva cohorte
 
-Crear `src/data/2027.json` (mismo formato que [`src/data/2026.json`](src/data/2026.json)):
+Crear `src/data/2027.json` (mismo formato que [`src/data/2025.json`](src/data/2025.json)):
 
 ```json
 {
@@ -91,7 +91,7 @@ No hace falta crear páginas, rutas ni componentes nuevos: `src/data/index.ts` d
 
 ### Vincular el material académico de la cohorte
 
-Si existe un repositorio de contenido versionado por tags (`v2026`, `v2027`, ...), se puede enlazar agregando `materialUrl` al archivo del año:
+Si existe un repositorio de contenido versionado por tags (`v2025`, `v2026`, ...), se puede enlazar agregando `materialUrl` al archivo del año:
 
 ```json
 {
@@ -147,6 +147,6 @@ Dentro del `projects` del año correspondiente:
 - `repository`, `demo` e `image` son opcionales: si no existen (o son `null`), la interfaz simplemente no muestra ese botón/imagen — no hace falta dejarlos vacíos.
 - `featured: true` hace que el proyecto aparezca en la sección "Proyectos destacados" de la home.
 
-## Datos de ejemplo
+## Datos actuales
 
-`src/data/2026.json` incluye estudiantes y proyectos ficticios, claramente identificados como "Demo" / "de Ejemplo". Reemplazalos por los datos reales de la cohorte, o directamente vaciá los arrays `students` y `projects` cuando tengas contenido real para cargar.
+`src/data/2025.json` contiene la primera cohorte real cargada. Los años siguientes se agregan de la misma forma (ver "Agregar una nueva cohorte" más arriba).
