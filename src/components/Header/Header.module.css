@@ -1,0 +1,132 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: color-mix(in srgb, var(--color-bg) 88%, transparent);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.bar {
+  display: flex;
+  align-items: center;
+  gap: var(--space-5);
+  height: 68px;
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-weight: 700;
+  font-size: 1.05rem;
+  letter-spacing: -0.01em;
+  white-space: nowrap;
+}
+
+.brandMark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: var(--radius-sm);
+  background: linear-gradient(135deg, var(--color-accent), var(--color-accent-2));
+  color: #0a0c12;
+  font-size: 0.75rem;
+  font-weight: 800;
+}
+
+.nav {
+  flex: 1;
+}
+
+.nav ul {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.navLink {
+  display: inline-flex;
+  padding: var(--space-2) var(--space-3);
+  border-radius: var(--radius-full);
+  color: var(--color-text-muted);
+  font-weight: 500;
+  font-size: 0.9375rem;
+  transition: color var(--transition-fast), background-color var(--transition-fast);
+}
+
+.navLink:hover {
+  color: var(--color-text);
+  background: var(--color-bg-elevated-hover);
+}
+
+.navLinkActive {
+  color: var(--color-text);
+  background: var(--color-accent-soft);
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.githubLink {
+  display: none;
+}
+
+.menuButton {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--color-border);
+  background: var(--color-bg-elevated);
+  cursor: pointer;
+}
+
+@media (min-width: 860px) {
+  .githubLink {
+    display: inline-flex;
+  }
+}
+
+@media (max-width: 859px) {
+  .menuButton {
+    display: inline-flex;
+  }
+
+  .nav {
+    position: fixed;
+    inset: 68px 0 auto 0;
+    transform: translateY(-8px);
+    opacity: 0;
+    pointer-events: none;
+    background: var(--color-bg);
+    border-bottom: 1px solid var(--color-border);
+    box-shadow: var(--shadow-md);
+    transition: opacity var(--transition-fast), transform var(--transition-fast);
+  }
+
+  .navOpen {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .nav ul {
+    flex-direction: column;
+    align-items: stretch;
+    padding: var(--space-4) var(--space-5) var(--space-5);
+    gap: var(--space-1);
+  }
+
+  .navLink {
+    border-radius: var(--radius-sm);
+    padding: var(--space-3) var(--space-4);
+  }
+}

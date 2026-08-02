@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <title>Portfolio Académico de Inteligencia Artificial</title>
+    <script type="text/javascript">
+      // GitHub Pages serves this file for any unknown path (e.g. a deep link like
+      // /portfolio-ia/students/juan-perez opened directly). It rewrites that path
+      // into a query string and redirects to the real index.html, which decodes it
+      // back into a history entry so React Router can render the right page.
+      // See: https://github.com/rafgraph/spa-github-pages
+      var pathSegmentsToKeep = 1; // keep "/portfolio-ia"
+      var l = window.location;
+      l.replace(
+        l.protocol +
+          '//' +
+          l.hostname +
+          (l.port ? ':' + l.port : '') +
+          l.pathname
+            .split('/')
+            .slice(0, 1 + pathSegmentsToKeep)
+            .join('/') +
+          '/?/' +
+          l.pathname
+            .slice(1)
+            .split('/')
+            .slice(pathSegmentsToKeep)
+            .join('/')
+            .replace(/&/g, '~and~') +
+          (l.search ? '&' + l.search.slice(1).replace(/&/g, '~and~') : '') +
+          l.hash,
+      );
+    </script>
+  </head>
+  <body></body>
+</html>

@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Portfolio Académico de Inteligencia Artificial</title>
+    <meta
+      name="description"
+      content="Proyectos de Inteligencia Artificial desarrollados por estudiantes a través de distintas cohortes académicas."
+    />
+    <meta name="theme-color" content="#0a0c12" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Portfolio Académico de Inteligencia Artificial" />
+    <meta
+      property="og:description"
+      content="Proyectos de Inteligencia Artificial desarrollados por estudiantes a través de distintas cohortes académicas."
+    />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Portfolio Académico de Inteligencia Artificial" />
+    <meta
+      name="twitter:description"
+      content="Proyectos de Inteligencia Artificial desarrollados por estudiantes a través de distintas cohortes académicas."
+    />
+
+    <script type="text/javascript">
+      // GitHub Pages has no server-side routing, so deep links (e.g. /students/juan-perez)
+      // get redirected to 404.html, which forwards here with the path encoded in the query
+      // string. This decodes it back into a real history entry before React Router mounts.
+      // See: https://github.com/rafgraph/spa-github-pages
+      (function (l) {
+        if (l.search[1] === '/') {
+          var decoded = l.search
+            .slice(1)
+            .split('&')
+            .map(function (s) {
+              return s.replace(/~and~/g, '&');
+            })
+            .join('?');
+          window.history.replaceState(null, '', l.pathname.slice(0, -1) + decoded + l.hash);
+        }
+      })(window.location);
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

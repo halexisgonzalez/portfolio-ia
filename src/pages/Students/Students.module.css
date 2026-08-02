@@ -1,0 +1,29 @@
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  margin-bottom: var(--space-6);
+}
+
+.header h1 {
+  font-size: clamp(1.75rem, 1.5rem + 1vw, 2.5rem);
+}
+
+.controls {
+  display: flex;
+  padding-bottom: var(--space-5);
+  border-bottom: 1px solid var(--color-border);
+  margin-bottom: var(--space-5);
+}
+
+.resultCount {
+  color: var(--color-text-faint);
+  font-size: 0.875rem;
+  margin-bottom: var(--space-5);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: var(--space-5);
+}

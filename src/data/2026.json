@@ -1,0 +1,82 @@
+{
+  "year": 2026,
+  "students": [
+    {
+      "id": "estudiante-demo-uno",
+      "name": "Estudiante Demo Uno",
+      "github": "https://github.com/octocat",
+      "linkedin": "https://www.linkedin.com/in/example",
+      "bio": "Perfil de ejemplo. Reemplazar por los datos reales del estudiante.",
+      "projectIds": ["clasificador-imagenes-demo"]
+    },
+    {
+      "id": "estudiante-demo-dos",
+      "name": "Estudiante Demo Dos",
+      "github": "https://github.com/octocat",
+      "website": "https://example.com",
+      "bio": "Perfil de ejemplo. Reemplazar por los datos reales del estudiante.",
+      "projectIds": ["chatbot-academico-demo", "recomendador-productos-demo"]
+    },
+    {
+      "id": "estudiante-demo-tres",
+      "name": "Estudiante Demo Tres",
+      "github": "https://github.com/octocat",
+      "bio": "Perfil de ejemplo. Reemplazar por los datos reales del estudiante.",
+      "projectIds": ["chatbot-academico-demo", "generador-imagenes-demo"]
+    }
+  ],
+  "projects": [
+    {
+      "id": "clasificador-imagenes-demo",
+      "name": "Proyecto de Ejemplo: Clasificador de Imágenes",
+      "description": "Proyecto demo que clasifica imágenes en distintas categorías utilizando una red convolucional entrenada desde cero. Este contenido es de ejemplo y debe reemplazarse por proyectos reales.",
+      "year": 2026,
+      "studentIds": ["estudiante-demo-uno"],
+      "category": "Computer Vision",
+      "technologies": ["Python", "PyTorch", "OpenCV", "NumPy"],
+      "repository": "https://github.com/octocat/clasificador-imagenes-demo",
+      "demo": "https://example.com/demo/clasificador-imagenes",
+      "image": null,
+      "featured": true
+    },
+    {
+      "id": "chatbot-academico-demo",
+      "name": "Proyecto de Ejemplo: Chatbot Académico",
+      "description": "Asistente conversacional de ejemplo, orientado a responder preguntas frecuentes de una materia utilizando modelos de lenguaje. Este contenido es de ejemplo y debe reemplazarse por proyectos reales.",
+      "year": 2026,
+      "studentIds": ["estudiante-demo-dos", "estudiante-demo-tres"],
+      "category": "Natural Language Processing",
+      "technologies": ["Python", "LangChain", "Transformers"],
+      "repository": "https://github.com/octocat/chatbot-academico-demo",
+      "demo": null,
+      "image": null,
+      "featured": true
+    },
+    {
+      "id": "recomendador-productos-demo",
+      "name": "Proyecto de Ejemplo: Recomendador de Contenidos",
+      "description": "Sistema de recomendación de ejemplo basado en filtrado colaborativo sobre un dataset público. Este contenido es de ejemplo y debe reemplazarse por proyectos reales.",
+      "year": 2026,
+      "studentIds": ["estudiante-demo-dos"],
+      "category": "Data Science",
+      "technologies": ["Python", "Pandas", "scikit-learn"],
+      "repository": "https://github.com/octocat/recomendador-productos-demo",
+      "demo": "https://example.com/demo/recomendador",
+      "image": null,
+      "featured": false
+    },
+    {
+      "id": "generador-imagenes-demo",
+      "name": "Proyecto de Ejemplo: Generador de Imágenes",
+      "description": "Modelo generativo de ejemplo capaz de crear imágenes sintéticas a partir de descripciones de texto. Este contenido es de ejemplo y debe reemplazarse por proyectos reales.",
+      "year": 2026,
+      "studentIds": ["estudiante-demo-tres"],
+      "category": "Generative AI",
+      "technologies": ["Python", "PyTorch", "Diffusers"],
+      "repository": "https://github.com/octocat/generador-imagenes-demo",
+      "demo": null,
+      "image": null,
+      "featured": false
+    }
+  ]
+}
