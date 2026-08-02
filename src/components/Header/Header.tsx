@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { NavLink, useLocation } from 'react-router-dom';
-import { siteConfig } from '../../config/site';
+import { institution, siteConfig } from '../../config/site';
 import { ThemeToggle } from '../ThemeToggle/ThemeToggle';
 import styles from './Header.module.css';
 
@@ -52,6 +52,13 @@ export function Header() {
         </nav>
 
         <div className={styles.actions}>
+          <span className={styles.institutionLogo}>
+            <img
+              src={`${import.meta.env.BASE_URL}${institution.logo}`}
+              alt={institution.name}
+              title={institution.name}
+            />
+          </span>
           <a
             href={siteConfig.repositoryUrl}
             target="_blank"

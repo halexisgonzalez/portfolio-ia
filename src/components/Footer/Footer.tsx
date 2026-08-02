@@ -1,4 +1,4 @@
-import { siteConfig } from '../../config/site';
+import { courseInfo, institution, siteConfig } from '../../config/site';
 import styles from './Footer.module.css';
 
 export function Footer() {
@@ -7,15 +7,20 @@ export function Footer() {
   return (
     <footer className={styles.footer}>
       <div className={`container ${styles.top}`}>
+        <div>
+          <p className={styles.institutionLine}>{institution.name}</p>
+          <p className={styles.courseLine}>
+            {courseInfo.program} · {courseInfo.subject} · {courseInfo.professor} ·{' '}
+            <a href={`mailto:${courseInfo.contactEmail}`}>{courseInfo.contactEmail}</a>
+          </p>
+        </div>
+
         <span className={styles.logoBadge}>
           <img
-            src={`${import.meta.env.BASE_URL}images/university-logo.png`}
-            alt="Universidad de la Defensa Nacional (UNDEF)"
+            src={`${import.meta.env.BASE_URL}${institution.logo}`}
+            alt={institution.logoAlt}
             className={styles.logo}
           />
-        </span>
-        <span className={styles.institutionTitle}>
-          Centro Regional Universitario Córdoba IUA
         </span>
       </div>
 
