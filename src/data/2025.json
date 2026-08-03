@@ -70,7 +70,7 @@
       "repository": "https://github.com/agussanguesa32/proyecto-ia-2025",
       "demo": null,
       "image": null,
-      "featured": false
+      "featured": true
     },
     {
       "id": "voc-miner",
@@ -159,7 +159,7 @@
       "repository": "https://github.com/MattGoode7/ia-project-iua-2025",
       "demo": null,
       "image": null,
-      "featured": false
+      "featured": true
     },
     {
       "id": "eth-security",
